@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="shortcut icon" href="../img/ICONO.svg">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" 
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/estilo.css">
+    <script> src="../js/validar.js" </script>
+</head>
+<body>
+  <div id="cabecera">
+    <img id="logo" src="../img/LOGO.svg"> </div>
+    
+    <div class="container">
+        <h1>
+            <center>
+                REGÍSTRATE <!-- titulo de la página -->
+            </center> 
+        </h1>
+        <center>Ya estás registrado? <a href="sesion.phtml">Inicia sesión</a></center> 
+        <!-- Sí ya está registrado, entonces se redirecciona hacia "seccion.php" -->
+
+    </div> <br>  <br>
+    <div class="container col-md-10"> <!-- Contenedor de los input -->
+      <div class="form-row">
+            <div class="col-md-6">
+                <center>
+                <img id="logo" src="../img/ICONO.svg" class="img-fluid" style="height:150px; width: 150px; border-radius: 50%;">
+                
+                <p>
+                    <h2>¡Usa tu imaginación!</h2><br>
+                    <h4>Crea tus propios guiones, y publicalos.</h4>
+                </p>
+                </center>
+            </div>
+
+
+      <div class="col-md-5" id="container" style="padding: 15px;">
+           
+        <form action="../models/registro.php" method="post" oninput="return validar();"> <!-- Se envía el formulario a ../modelo/registro.php -->
+      
+          <div class="form-row">
+            <div class="form-group col-md-6">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"><img src="../icons/person-circle.svg"></span>
+                </div>
+              <input type="text" id="nombre" class="form-control" name="nombre" placeholder="Nombres" onkeypress="return Solo_Texto(event);" style="background: none;" required> <!-- input del nombre -->
+            </div></div>
+              <div class="form-group col-md-6">
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"><img src="../icons/person-circle.svg"></span>
+                </div>
+                <input type="text" id="apellido" class="form-control" name="apellido" placeholder="Apellidos" style="background: none;" required> <!-- imput del apellido -->
+              </div></div>
+            </div>
+              <div class="form-row">
+              <div class="form-group col">
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"><img src="../icons/a.svg"></span>
+                </div>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Correo electrónico" style="background: none;" required> <!-- input del E-mail -->
+              </div></div>
+            </div>
+              <div class="form-row">
+                <div class="form-group col">
+                <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"><img src="../icons/key.svg"></i></span>
+                </div>
+                  <input type="password" class="form-control" id="contraseña" name="contraseña" placeholder="Contraseña" style="background: none;" required> <!-- Input de la contraseña -->
+                </div></div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col">
+                <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"><img src="../icons/key.svg"></i></span>
+                </div>
+                <input type="password" id="contraseña_conf" name="contraseña_conf" class="form-control" placeholder="Vuelva a escribir la contraseña" style="background: none;" required><!--  input del la confirmacio de la contraseña -->
+                </div></div>
+              </div>
+              
+              <div class="form-row">
+              <div class="form-group col">
+                <label>Sexo:</label><br>
+                <!-- inputs tipo radio del sexo -->
+                <div class="form-check form-check-inline">
+                <div class="input-group-prepend">
+                <div class="input-group-text">
+                  <input class="form-check-input" type="radio" id="sexo1" name="sexo" value="M" required> 
+                  <label class="form-check-label" for="sexo1">Masculino</label> </div></div>
+                </div>
+                <div class="form-check form-check-inline">
+                <div class="input-group-prepend">
+                <div class="input-group-text">
+                  <input class="form-check-input" type="radio" id="sexo2" name="sexo" value="F" required>
+                  <label class="form-check-label" for="sexo2">Femenino</label></div></div>
+                </div>
+                <div class="form-check form-check-inline">
+                <div class="input-group-prepend">
+                <div class="input-group-text">
+                  <input class="form-check-input" type="radio" id="sexo3" name="sexo" value="Ot" required>
+                  <label class="form-check-label" for="sexo3">Otro</label></div></div>
+                </div>
+              </div>
+            </div>
+            
+              
+            
+            <input type="submit" value="REGISTRAR" class="btn btn-success col-md-6 offset-md-3" > <!-- Botón que ingresará los datos -->
+            
+            
+      </form>
+
+          </div>
+
+          </div>
+
+      </div> 
+
+      
+    <script>
+    function Solo_Texto(e) {
+    var code;
+    if (!e) var e = window.event;
+    if (e.keyCode) code = e.keyCode;
+    else if (e.which) code = e.which;
+    var character = String.fromCharCode(code);
+    var AllowRegex  = /^[\ba-zA-Z\s-]$/;
+    if (AllowRegex.test(character)) return true;     
+    return false; 
+}
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>
