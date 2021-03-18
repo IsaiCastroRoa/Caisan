@@ -1,0 +1,158 @@
+body
+{
+    background-color: #afe8f0;
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#container
+{
+    background-color: #ffffffdc;
+    border: none;
+    border-radius: 10px;
+}
+#hoja
+{
+    background-color: #ffffff;
+    padding: 5%;
+    text-align: justify;
+}
+#icon {
+    color: #649fda;
+    font-size: 270%;
+    --ionicon-stroke-width: 16px;
+}
+#file-file
+{
+    position: relative;    
+}
+#file
+{
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+}
+input[type="text"],input[type="email"],input[type="password"] 
+{
+    border-radius: 0;
+    border: none;
+    background: none;
+    border-bottom: solid 1px #808080;
+    outline: none;
+}
+
+nav
+{
+    background-color: #262b28;
+
+    
+}
+nav ul li a, nav a label p
+{
+    color: #888787;
+}
+#cabecera
+{
+    background-color: #ffffffdc;
+    height: 90px;
+    width: 100%;
+    border: #262b28;
+    margin-bottom: 30px;
+    padding: 15px 15px 15px 100px;
+}
+#user
+{
+    text-decoration: none;
+    color: #ffffff;
+    border: #ffffff solid 1px;
+    padding: 4px;
+    border-radius: 10px;
+    background: linear-gradient(to right, #1c362e9c, #191e63c0);
+}
+
+
+#out
+{
+    color: #9e3434;
+}
+#home
+{
+    color: #1a1919;
+    background-color: #6cb5c773;
+    margin-top: 10px;
+}
+#link
+{
+    padding-top: 3%;
+    
+    z-index: 1;
+}
+#select
+{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+    color: black;
+    background-color: #afe8f0;
+    border: 2px solid black;
+}
+
+#row-con
+{
+    margin-top: 3%;
+    background: linear-gradient(to right, #00805a9c, #6c079bb7);
+    border-radius: 20px;
+}
+#row-can
+{
+    margin-top: 3%;
+    background: linear-gradient(to right, #6c079bb7, #00805a9c);
+    border-radius: 20px;
+}
+#con1
+{
+    font-family: cursive;
+    font-size: 15px;
+    text-align: justify;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+#consejo1
+{
+    margin-top: 10%;
+    margin-bottom: 10%;
+    height: 85%;
+    width: 120%;
+}
+#consejo
+{
+    margin-top: 20%;
+}
+#recipient-name
+{
+    border: 1px solid;
+    border-radius: 5px;
+    border-color: #262b28;
+}
+#titulo
+{
+    margin-top: 10px;
+    padding-top: 10px;
+}
+#row-job
+{
+    padding: 20px;
+}
+#arq
+{
+    padding: 10px;
+    border: 1px solid;
+    border-color:  #7e7e7e;
+    background: linear-gradient(to right, #9b9c9cb7, #f1f5f49c,#9b9c9cb7);
+    border-radius: 7px;
+    font-size: 15px;
+}

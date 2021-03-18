@@ -1,0 +1,39 @@
+<? session_start(); ?>
+
+
+<div class="container col-md-8"> 
+
+<div class="jumbotron" id="home">
+  <h1 class="display-md-4">Hola, Bienvenido!</h1>
+  <p class="lead">Espero que estes listo para dejar fluir tu cretividad, 
+  no olvides que un escritor profesional es aquel amateur que nunca se dio por vencido. <br></p>
+  <hr class="my-4">
+  <p>- Escribir es un oficio que se aprende escribiendo... <br>
+  Recuerda que dejamos algunos consejos para ti, los cuales te serán de gran ayuda. <br>
+  <a href="../controller/consejo.php">Leer consejos...</a></p>
+  <a class="btn btn-primary btn-md-lg" href="#" role="button">Abrir un proyecto</a>
+  <button class="btn btn-secondary btn-md-lg" data-toggle="modal" data-target="#proyecto">Crear nuevo proyecto</button>
+</div>
+    
+</div>
+
+<div class="modal fade" id="proyecto">
+  <div class="modal-dialog">
+    <div class="modal-content">
+    <div class="modal-body">
+        <h2>Crear nuevo proyecto</h2>
+        <hr>
+        <form method="post" action="../models/proyecto.php">
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Nombre del proyecto</label>
+            <input type="text" class="form-control" id="recipient-name" name="nombre">
+          </div>
+          
+          <div class="modal-footer">
+            <input type="submit"  class="btn btn-primary" value="Crear">
+        </form>    
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+      </div>
+    </div>
+  </div>
+</div>    
