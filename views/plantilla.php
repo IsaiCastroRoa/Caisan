@@ -9,6 +9,8 @@ if(!isset($_SESSION['email'])){
 
 $email = $_SESSION['email'];
 
+  mysqli_set_charset($conexion, "utf8");
+
   $sql= "SELECT nombre, apellido FROM usuarios WHERE email= '$email';";
   $resultado=$conexion->query($sql);
 
@@ -59,6 +61,7 @@ $email = $_SESSION['email'];
   <li class="form-inline nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="user" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <?php
+         mysqli_set_charset($conexion, "utf8");
         echo utf8_decode($row['nombre']);
         echo ' ';
         echo utf8_decode($row['apellido']); ?>
@@ -67,7 +70,7 @@ $email = $_SESSION['email'];
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="#">Perfil</a>
           <a class="dropdown-item" href="#">Configuración</a>
-          <a class="dropdown-item" href="../views/secure/seguridad.phtml">Seguridad</a>
+          <a class="dropdown-item" href="../controller/seguridad.php">Seguridad</a>
           <div class="dropdown-divider"></div>
           <a class="nav-link" href="../controller/salir.php" id="out">Salir</a>
         </div>

@@ -26,7 +26,7 @@ if(!isset($email)){
                  </label>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <img src="../img/menu.svg">
+            <img src="../icons/menu.svg">
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -47,10 +47,10 @@ if(!isset($email)){
                         <a class="nav-link" href="#Objetos">Objetos</a>
                     </li> 
                     <li>
-                        <a class="nav-link" href="#Capitulos">Capítulos</a>
+                        <a class="nav-link" href="#Sustancias">Sustancias</a>
                     </li> 
                     <li>
-                        <a class="nav-link" href="#Sustancias">Sustancias</a>
+                        <a class="nav-link" href="#Capitulos">Capítulos</a>
                     </li> 
                     <li>
                         <a class="nav-link" href="#Sustancias" style="color: #573de7;">Guardar y volver</a>

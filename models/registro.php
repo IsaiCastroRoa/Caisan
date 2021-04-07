@@ -1,6 +1,6 @@
 <?php
     include_once('conexion.php');
-    
+    mysqli_set_charset($conexion, "utf8");
     $contraseña = $_POST['contraseña'];
     $contraseña_conf= $_POST['contraseña_conf'];
 
@@ -44,6 +44,5 @@
         ";
     }
     
-   /* 
-
-     */
+    mysqli_free_result($resultado);
+    mysqli_close($conexion);

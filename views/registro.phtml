@@ -7,8 +7,7 @@
     <link rel="shortcut icon" href="../img/ICONO.svg">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" 
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/estilo.css">
-    <script> src="../js/validar.js" </script>
+    <link rel="stylesheet" href="./../css/estilo.css">
 </head>
 <body>
   <div id="cabecera">
@@ -38,9 +37,9 @@
             </div>
 
 
-      <div class="col-md-5" id="container" style="padding: 15px;">
+      <div class="col-md-5" id="container">
            
-        <form action="../models/registro.php" method="post" oninput="return validar();"> <!-- Se envía el formulario a ../modelo/registro.php -->
+        <form action="../models/registro.php" method="post"> <!-- Se envía el formulario a ../modelo/registro.php -->
       
           <div class="form-row">
             <div class="form-group col-md-6">
@@ -124,19 +123,6 @@
 
       </div> 
 
-      
-    <script>
-    function Solo_Texto(e) {
-    var code;
-    if (!e) var e = window.event;
-    if (e.keyCode) code = e.keyCode;
-    else if (e.which) code = e.which;
-    var character = String.fromCharCode(code);
-    var AllowRegex  = /^[\ba-zA-Z\s-]$/;
-    if (AllowRegex.test(character)) return true;     
-    return false; 
-}
-    </script>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

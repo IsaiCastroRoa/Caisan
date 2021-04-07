@@ -10,6 +10,7 @@ body
     background-color: #ffffffdc;
     border: none;
     border-radius: 10px;
+    padding: 15px;
 }
 #hoja
 {
@@ -155,4 +156,22 @@ nav ul li a, nav a label p
     background: linear-gradient(to right, #9b9c9cb7, #f1f5f49c,#9b9c9cb7);
     border-radius: 7px;
     font-size: 15px;
+}
+
+#seguro
+{
+    height: 150px;
+    width: 150px;
+}
+#text
+{
+    margin-top: 40px;
+    padding: 50px;
+    color: white;
+    background-color: #474747;
+    border-radius: 30px;
+}
+p
+{
+    text-align: justify;
 }

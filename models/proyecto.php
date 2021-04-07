@@ -3,7 +3,7 @@
     if(!isset($_SESSION['email'])){
         header("location: ../views/sesion.phtml");
     }
-      
+    mysqli_set_charset($conexion, "utf8");
     $email = $_SESSION['email'];
       
 

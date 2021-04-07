@@ -3,7 +3,8 @@ $server="localhost";
 $user="root";
 $db="writer";
 $conexion= mysqli_connect($server,$user,"",$db);
-$conexion->set_charset("utf-8");
+
+mysqli_set_charset($conexion, "utf8");
 
 /* if(!isset($conexion)){
     echo "no";

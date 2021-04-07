@@ -5,7 +5,7 @@ include_once('conexion.php');
 $email=$_POST['email'];
 $contraseña=$_POST['contraseña'];     //Datos recibidas por medio de post
 
-
+mysqli_set_charset($conexion, "utf8");
 
 $sql="SELECT COUNT(*) AS contar FROM usuarios WHERE email='$email'; "; //Mi metodo para saber si el correo existe
 $resultado= mysqli_query($conexion, $sql);
